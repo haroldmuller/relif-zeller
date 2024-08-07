@@ -4,10 +4,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    dueDate: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
     clientId: {
       type: DataTypes.INTEGER,
       references: {
@@ -16,10 +12,14 @@ module.exports = (sequelize, DataTypes) => {
       },
       allowNull: false,
     },
+    dueDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
     institution: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+    },
   });
 
   Debt.associate = (models) => {

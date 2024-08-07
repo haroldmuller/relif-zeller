@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
-  Message.associate = (models) => {
+  Message.associate = models => {
     Message.belongsTo(models.Client, {
       foreignKey: 'clientId',
       as: 'client',

@@ -11,5 +11,17 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
+  Client.associate = models => {
+    Client.hasMany(models.Message, {
+      foreignKey: 'clientId',
+      as: 'messages',
+    });
+
+    Client.hasMany(models.Debt, {
+      foreignKey: 'clientId',
+      as: 'debts',
+    });
+  };
+
   return Client;
 };
