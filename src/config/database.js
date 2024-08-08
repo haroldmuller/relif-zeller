@@ -3,7 +3,7 @@ const { Client } = require('pg');
 
 const DB_NAME = process.env.DB_NAME || 'relif_zeller_dev';
 const DB_USER = process.env.DB_USER || 'postgres';
-const DB_PASS = process.env.DB_PASS || null;
+const DB_PASS = process.env.DB_PASS || 'password';
 const DB_HOST = process.env.DB_HOST || 'localhost';
 
 // Create a new Sequelize instance
